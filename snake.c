@@ -90,15 +90,27 @@ void Logic() {
     }
 
     switch (dir) {
-        case LEFT: x--; break;
-        case RIGHT: x++; break;
-        case UP: y--; break;
-        case DOWN: y++; break;
+        case
+         LEFT: x--; break;
+        case
+         RIGHT: x++; break;
+        case
+         UP: y--; break;
+        case
+         DOWN: y++; break;
         default: break;
     }
 
-    if (x >= WIDTH) x = 0; else if (x < 0) x = WIDTH-1;
-    if (y >= HEIGHT) y = 0; else if (y < 0) y = HEIGHT-1;
+    if (x >= WIDTH){
+        x = 0;
+    }else if (x < 0){
+        x = WIDTH-1;
+    }
+    if (y >= HEIGHT){
+        y = 0;
+    }else if (y < 0){
+        y = HEIGHT-1;
+    }
 
     for (int i = 0; i < nTail; i++)
         if (tailX[i] == x && tailY[i] == y)
