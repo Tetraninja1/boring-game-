@@ -6,6 +6,7 @@
 
 int main() {
     srand(time(0));
+    int n=120;
     int score=0;
     int x = 1;              // player position (0 to 2)
     int step = 0;           // obstacle vertical movement
@@ -58,13 +59,32 @@ int main() {
             printf("\nGAME OVER!\n");
             printf("score: %d",score);
             break;
-        }if(step == 10 && x != obstaclePos){
+        }
+        
+        // scoreboard code
+
+        if(step == 10 && x != obstaclePos){
             score = score + 10;
         }
             printf("score: %d  ",score);
 
-        Sleep(120);
+        Sleep(n);
+        
+        // change of difficulty on the basis of score
 
+        if(score<=40){
+            n = 120;
+        }else if(score==60){
+            n = 100;
+        }else if(score==80){
+            n = 90;
+        }else if(score==100){
+            n = 80;
+        }else if(score==120){
+            n = 70;
+        }else if(score==140){
+            n = 50;
+        }
         // Move obstacle down
         step++;
 
