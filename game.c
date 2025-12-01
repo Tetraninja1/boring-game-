@@ -6,7 +6,7 @@
 
 int main() {
     srand(time(0));
-
+    int score=0;
     int x = 1;              // player position (0 to 2)
     int step = 0;           // obstacle vertical movement
     int obstaclePos = rand() % 3;   // 0,1,2 lane
@@ -56,8 +56,12 @@ int main() {
         // ---- COLLISION ----
         if (step == 10 && x == obstaclePos) {
             printf("\nGAME OVER!\n");
+            printf("score: %d",score);
             break;
+        }if(step == 10 && x != obstaclePos){
+            score = score + 10;
         }
+            printf("score: %d  ",score);
 
         Sleep(120);
 
