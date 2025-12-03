@@ -1,5 +1,5 @@
 File - game.c
-This file consist the modified version of given given game.
+This file consist the modified version of given game.
 
 1. we have taken a code for navigation of our ship using arrow keys of system
 2. There is a system cls command for clearing the terminal
