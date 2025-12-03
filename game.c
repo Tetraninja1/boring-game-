@@ -33,13 +33,13 @@ int main() {
             if (i == step) {
 
                 if (obstaclePos == 0)
-                    printf("| %d        |\n", 1);
+                    printf("| %c        |\n", '*');
 
                 else if (obstaclePos == 1)
-                    printf("|     %d    |\n", 1);
+                    printf("|     %c    |\n", '*');
 
                 else if (obstaclePos == 2)
-                    printf("|        %d |\n", 1);
+                    printf("|        %c |\n", '*');
 
             } else {
                 printf("|           |\n");
@@ -48,11 +48,11 @@ int main() {
 
         // ---- PLAYER ----
         if (x == 0)
-            printf("| %d        |\n", 6);
+            printf("| %c        |\n", '^');
         else if (x == 1)
-            printf("|     %d    |\n", 6);
+            printf("|     %c    |\n", '^');
         else if (x == 2)
-            printf("|        %d |\n", 6);
+            printf("|        %c |\n", '^');
 
         // ---- COLLISION ----
         if (step == 10 && x == obstaclePos) {
