@@ -10,3 +10,14 @@ This file consist the modified version of given game.
 7. atlast we have difficulty mechanism
 
 
+File - snake.c
+This file consist the simple terminal based snake game.
+
+RULES--
+we just have to eat the fruit and prevent the snake to biting it self
+
+CONTROLS--
+we have to navigate snake using 'w','a','s','d'.
+
+FEATURES-- 
+it has scoreboard which shows your current score.
