@@ -7,7 +7,7 @@
 #define HEIGHT 20
 
 int gameOver;
-int x, y, fruitX, fruitY, score;
+int x, y, Gemx, Gemy, score;
 int tailX[100], tailY[100];
 int nTail;
 enum eDirection { STOP = 0, LEFT, RIGHT, UP, DOWN };
@@ -18,8 +18,8 @@ void Setup() {
     dir = STOP;
     x = WIDTH / 2;
     y = HEIGHT / 2;
-    fruitX = rand() % WIDTH;
-    fruitY = rand() % HEIGHT;
+    Gemx = rand() % WIDTH;
+    Gemy = rand() % HEIGHT;
     score = 0;
 }
 
@@ -36,7 +36,7 @@ void Draw() {
 
             if (i == y && j == x)
                 printf("O");
-            else if (i == fruitY && j == fruitX)
+            else if (i == Gemy && j == Gemx)
                 printf("F");
             else {
                 int print = 0;
@@ -116,10 +116,10 @@ void Logic() {
         if (tailX[i] == x && tailY[i] == y)
             gameOver = 1;
 
-    if (x == fruitX && y == fruitY) {
+    if (x == Gemx && y == Gemy) {
         score += 10;
-        fruitX = rand() % WIDTH;
-        fruitY = rand() % HEIGHT;
+        Gemx = rand() % WIDTH;
+        Gemy = rand() % HEIGHT;
         nTail++;
     }
 }
